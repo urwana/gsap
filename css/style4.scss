@@ -1,0 +1,21 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.box{
+background-color: aquamarine;
+width: 160px;
+height:160px;
+border-radius: 10px;
+}
+
+.box.is-active{
+background-color: orange;
+}
+
+.spacer{
+  width: 100%;
+  height: 100vh;
+}

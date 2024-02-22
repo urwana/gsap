@@ -1,0 +1,60 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*ここまでは見た目を整える記述*/
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.opening {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.opening__mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  z-index: 9;
+}
+
+.opening__logo {
+  display: block;
+  width: 500px;
+  height: 500px;
+  z-index: 99;
+  -webkit-clip-path: inset(0 100% 0 0);
+          clip-path: inset(0 100% 0 0); /*予め切り取り*/
+  transform: scale(1.1); /*予め大きくしておく*/
+}
+
+.mainVisual {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.mainVisual img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: scale(1.5); /*背景画像も予め大きくしておく*/
+}/*# sourceMappingURL=style6-1.css.map */

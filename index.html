@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>menu</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+  <script src="./js/script.js"></script>
+</head>
+
+<body>
+  <div class="contents">
+    <header class="header">
+      <div class="menu">
+        <div class="menu__left">
+          <img width="200" height="500" src="https://ryo-sukeblog.net/wp-content/uploads/2023/02/coffee-gdc00d5151_1280.jpg" alt="">
+        </div>
+        <div class="menu__right">
+          <div class="menu__col">
+            <div class="text-wrap">
+              <p class="menu__title js-text-move">NEWS</p>
+            </div>
+            <ul class="menu__lists">
+              <li class="menu__list text-wrap"><a class="js-text-move" href="">ニュースレター</a></li>
+              <li class="menu__list text-wrap"><a class="js-text-move" href="">セミナー</a></li>
+              <li class="menu__list text-wrap"><a class="js-text-move" href="">お知らせ</a></li>
+            </ul>
+          </div>
+          <div class="menu__col">
+            <div class="text-wrap">
+              <p class="menu__title js-text-move">RECRUIT</p>
+            </div>
+            <ul class="menu__lists">
+              <li class="menu__list text-wrap"><a class="js-text-move" href="">中途採用</a></li>
+              <li class="menu__list text-wrap"><a class="js-text-move" href="">インターン</a></li>
+              <li class="menu__list text-wrap"><a class="js-text-move" href="">その他</a></li>
+            </ul>
+          </div>
+          <div class="menu__col">
+            <div class="text-wrap">
+              <p class="menu__title js-text-move">COMPANY</p>
+            </div>
+            <ul class="menu__lists">
+              <li class="menu__list text-wrap"><a class="js-text-move" href="">理念</a></li>
+              <li class="menu__list text-wrap"><a class="js-text-move" href="">事業所概要</a></li>
+              <li class="menu__list text-wrap"><a class="js-text-move" href="">その他</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <button class="header-menu-trigger">
+        <span class="line" data-index="1"></span>
+        <span class="line" data-index="2"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+      </button>
+    </header>
+    <main class="container">
+      <img class="mainVisual" src="https://picsum.photos/id/431/1920/1080?grayscale" alt="">
+    </main>
+  </div>
+</body>
+
+</html>

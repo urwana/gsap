@@ -1,0 +1,197 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 1;
+}
+
+/*ボタン*/
+.header-menu-trigger {
+  width: 64px;
+  height: 64px;
+  border-radius: 28px;
+  background-color: crimson;
+  position: fixed;
+  top: 64px;
+  right: 64px;
+  border: none;
+  cursor: pointer;
+  z-index: 99;
+  transition: background-color 0.5s;
+}
+
+.header-menu-trigger.is-active {
+  background-color: #fff;
+}
+
+.header-menu-trigger.is-active .line,
+.header-menu-trigger.is-active .dot {
+  background-color: crimson;
+}
+
+.line {
+  width: 13px;
+  height: 3px;
+  border-radius: 1px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.line[data-index="1"] {
+  transform: translate(calc(-50% + 3px), calc(-50% - 5px));
+}
+
+.line[data-index="2"] {
+  transform: translate(calc(-50% + 3px), calc(-50% + 5px));
+}
+
+.dot[data-index="1"] {
+  transform: translate(calc(-50% - 8px), calc(-50% - 5px));
+}
+
+.dot[data-index="2"] {
+  transform: translate(calc(-50% - 8px), calc(-50% + 5px));
+}
+
+/*メニュー*/
+.menu {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: none; /*初期状態*/
+}
+
+.menu__left,
+.menu__right {
+  width: 50%;
+  height: 100%;
+}
+
+.menu__left {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  -webkit-clip-path: inset(100% 0% 0% 0%);
+          clip-path: inset(100% 0% 0% 0%);
+}
+
+.menu__left img {
+  display: block;
+  width: 200px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-clip-path: inset(100% 0% 0% 0%);
+          clip-path: inset(100% 0% 0% 0%);
+}
+
+.menu__right {
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  -webkit-clip-path: inset(0% 0% 100% 0%);
+          clip-path: inset(0% 0% 100% 0%);
+}
+
+.menu__col + .menu__col {
+  margin-top: 40px;
+}
+
+.menu__lists {
+  padding-top: 20px;
+}
+
+.menu__list a {
+  display: block;
+  font-size: 18px;
+  color: white;
+  padding: 5px 0;
+}
+
+.menu__title {
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: crimson;
+  padding: 0 15px 5px 0;
+  position: relative;
+  --scaleX: 0;
+}
+
+.menu__title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  height: 1px;
+  transform-origin: center left;
+  transform: scaleX(var(--scaleX));
+}
+
+/*テキストを囲む要素*/
+.text-wrap {
+  overflow: hidden;
+}
+
+/*予め移動しておく*/
+.js-text-move {
+  transform: translateY(100%);
+}
+
+.mainVisual {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=style.css.map */

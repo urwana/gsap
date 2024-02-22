@@ -1,0 +1,132 @@
+@charset "UTF-8";
+HTML SCSS JSResult Skip Results Iframe EDIT ON * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+section {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  overflow: hidden;
+}
+
+/*=======ここまでは見た目を整えるための記述======*/
+/*ボタン*/
+.header-menu-trigger {
+  width: 64px;
+  height: 64px;
+  border-radius: 28px;
+  background-color: crimson;
+  position: fixed;
+  top: 64px;
+  right: 64px;
+  border: none;
+  cursor: pointer;
+  z-index: 99;
+  transition: background-color 0.5s;
+}
+
+.header-menu-trigger.is-active {
+  background-color: #fff;
+}
+
+.header-menu-trigger.is-active .line,
+.header-menu-trigger.is-active .dot {
+  background-color: crimson;
+}
+
+.line {
+  width: 13px;
+  height: 3px;
+  border-radius: 1px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.line[data-index="1"] {
+  transform: translate(calc(-50% + 3px), calc(-50% - 5px));
+}
+
+.line[data-index="2"] {
+  transform: translate(calc(-50% + 3px), calc(-50% + 5px));
+}
+
+.dot[data-index="1"] {
+  transform: translate(calc(-50% - 8px), calc(-50% - 5px));
+}
+
+.dot[data-index="2"] {
+  transform: translate(calc(-50% - 8px), calc(-50% + 5px));
+}
+
+.circle-bg {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: crimson;
+  position: absolute;
+  top: 64px;
+  right: 64px;
+  z-index: -1;
+  transform: scale(0);
+}
+
+/*メニュー内のスタイル*/
+.header-menu {
+  max-width: 500px;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.header-menu.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.header-lists {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-lists li {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(20px);
+}
+
+.header-lists li + li {
+  margin-top: 80px;
+}/*# sourceMappingURL=style7.css.map */

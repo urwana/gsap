@@ -1,0 +1,82 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/*ここまでは見た目を整える記述*/
+.opening {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.opening__mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  z-index: 1;
+  transform-origin: top right;
+}
+
+.opening__logo {
+  display: block;
+  width: 500px;
+  height: 500px;
+  z-index: 2;
+}
+
+.mainVisual {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.img-wrap img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.img-wrap:nth-of-type(1) {
+  width: 50vw;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-clip-path: inset(0 100% 0 0);
+          clip-path: inset(0 100% 0 0);
+  overflow: hidden;
+}
+
+.img-wrap:nth-of-type(2) {
+  width: 40vw;
+  height: 500px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  -webkit-clip-path: inset(0 100% 0 0);
+          clip-path: inset(0 100% 0 0);
+  overflow: hidden;
+}/*# sourceMappingURL=style6-2.css.map */

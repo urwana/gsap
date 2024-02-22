@@ -1,0 +1,85 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+}
+
+/*ここまでは見た目を整えるもの*/
+.lists {
+  display: flex;
+  align-items: center;
+}
+
+.list {
+  font-size: 18px;
+  font-family: "Noto Sans JP", sans-serif;
+  color: white;
+}
+
+.list a {
+  display: block;
+  padding: 0 12px;
+  overflow: hidden; /*はみ出た要素を隠す*/
+  letter-spacing: 0.1em; /*文字間を広げて余裕のある感じに*/
+}
+
+.list a.is-active {
+  color: red;
+}
+
+.list a:hover span {
+  color: red;
+}
+
+.list a.is-active {
+  cursor: initial;
+}
+
+/* display:flexとalign-items:centerは中身の高さに合わせるために記述*/
+.text-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+}
+
+.before {
+  display: flex;
+  align-items: center;
+}
+
+.before span,
+.after span {
+  line-height: 1.1;
+  transition: color 0.3s ease-out; /*ease-outで余裕のある動きに*/
+}
+
+.after span {
+  transform: translateY(100%);
+}/*# sourceMappingURL=style7-1.css.map */

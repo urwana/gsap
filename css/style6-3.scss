@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #333;
+    font-family: 'Zen Maru Gothic',sans-serif;
+}
+a{
+    text-decoration: none;
+    color: #111;
+}
+li{
+    list-style: none;
+}
+/*ヘッダー*/
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 1;
+}
+.header__nav{
+    width: 100%;
+    height: 100%;
+}
+.header__lists{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header__list{
+    height: 100%;
+}
+.header__list a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    padding: 10px 20px;
+}
+/*オープニング*/
+.opening{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+.opening__img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translate(0,50%) scale(.5);
+    filter:grayscale(1);
+    object-fit: cover;
+}
+.opening__container{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: fit-content;
+    height: fit-content;
+    padding: 40px;
+}
+.opening__title{
+    font-size: 80px;
+    color: #000;
+    font-weight: 900;
+    font-family: 'Montserrat',sans-serif;
+}
+.opening__heading{
+    font-size: 64px;
+    color: #000;
+    font-weight: 900;
+    font-family: 'Montserrat',sans-serif;
+    margin: 40px 0;
+}
+.opening__text{
+    font-size: 32px;
+    color: #000;
+    font-weight: 900;
+    font-family: 'Montserrat',sans-serif;
+}
+
+/*アニメーションの下準備*/
+.header{
+    transform: translateY(-100%);
+}
+.js-textAnimation{
+    overflow: hidden;
+}
+.js-textAnimation span{
+    display: inline-block;
+    transform: translateY(100%);
+}

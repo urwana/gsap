@@ -1,0 +1,38 @@
+html CSS JSResult Skip Results iframe EDIT ON body {
+  background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* カード型モジュール */
+
+.list {
+  max-width: 800px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 22px;
+}
+
+.list__item {
+  list-style: none;
+}
+
+.list__item-head {
+  padding-top: 62.5%;
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+
+.list__item-text {
+  padding: 10px;
+  background-color: #fff;
+}
