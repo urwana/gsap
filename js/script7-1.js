@@ -32,6 +32,20 @@ splitTextAll.forEach((splitTextWrapA) => {
   listWrapper.appendChild(list);
 });
 
+splitTextAll.forEach((target) => {
+  if (target.classList.contains("is-active")) return;
+  const before = target.querySelector(".before").querySelectorAll("span");
+  const after = target.querySelector(".after").querySelectorAll("span");
+  target.addEventListener("mouseenter", (e) => {
+    gsap.to(before, { y: "-100%", stagger: 0.1 });
+    gsap.to(after, { y: "0%", stagger: 0.1 });
+  });
+  target.addEventListener("mouseleave", (e) => {
+    gsap.to(before, { y: "0%", stagger: 0.1 });
+    gsap.to(after, { y: "100%", stagger: 0.1 });
+  });
+});
+
 // document.querySelectorAll() メソッドは、
 // 指定されたCSSセレクタに一致するすべての要素を返しますが、
 // その返り値は NodeList オブジェクトです。
