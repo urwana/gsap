@@ -1,0 +1,48 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.text-wrapper {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  --scaleX:0;
+}
+
+.text-wrapper::after {
+  content: "";
+  width: 100%;
+  height: 5px;
+  background-color: #fff;
+  margin-top: 5px;
+  transform: scaleX(var(--scaleX)); /*アニメーションの下準備*/
+}
+
+.text {
+  font-size: 32px;
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  transform: translateY(115%);
+  padding: 0 30px;
+}/*# sourceMappingURL=style7-4.css.map */

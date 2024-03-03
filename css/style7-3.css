@@ -1,0 +1,68 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 45vh;
+}
+
+body {
+  background-color: #F4F6F8;
+}
+
+li {
+  list-style: none;
+}
+
+.section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50vh 0 0;
+}
+
+.section:last-child {
+  padding-bottom: 50vh;
+}
+
+.title__en {
+  font-size: 64px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  color: #DC3001;
+}
+
+.title__jp {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 18px;
+  color: #000;
+}
+
+/* ここまでは見た目を整える記述 */
+.js-text-effect {
+  position: relative;
+  transform: translateY(20px);
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  --translateX:0px;
+}
+
+.js-text-effect::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #DC3001;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(var(--translateX));
+}/*# sourceMappingURL=style7-3.css.map */
