@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP',sans-serif;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: initial;
+}
+
+body{
+    background-color: #333;
+}
+
+.container{
+    width: 100%;
+    height: 200vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    position: relative;
+}
+
+.box svg{
+    transform-origin: center;
+    transform:rotate(120deg)
+}
+
+.box .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 54px;
+    font-weight: bold;
+}
+
+.box .is-highlight{
+    color: #FFCC70;
+}
